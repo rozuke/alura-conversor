@@ -1,0 +1,95 @@
+.side__anchorpane{
+    -fx-background-color: #353a56;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-border-style: solid;
+}
+
+.inner__pane{
+    -fx-background-color: #748cf1;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-border-style: solid;
+    -fx-border-color: #748cf1;
+}
+
+.btn__money{
+    -fx-background-color: #141313;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-border-style: solid;
+    -fx-border-color: #141313;
+}
+
+.main__panel{
+    -fx-background-color: #eaeef4;
+}
+
+.panel__info_usd{
+    -fx-background-color: #748cf1;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+    -fx-border-style: solid;
+    -fx-border-color: #748cf1;
+}
+
+.panel__info_eur{
+    -fx-background-color: #fafafa;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+    -fx-border-style: solid;
+    -fx-border-color: #fafafa;
+}
+
+.panel__info_lib{
+    -fx-background-color: #fd9999;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+    -fx-border-style: solid;
+    -fx-border-color: #fd9999;
+}
+
+.panel__info_yen{
+    -fx-background-color: #353a56;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+    -fx-border-style: solid;
+    -fx-border-color: #353a56;
+}
+
+.combo__money{
+    /*-jfx-focus-color: transparent;*/
+    /*-jfx-unfocus-color: transparent;*/
+    /*-fx-border-width: 1px;*/
+    /*-fx-border-color: #888888;*/
+    /*-fx-border-radius: 20px;*/
+    /*-fx-background-radius: 20px;*/
+    /*-fx-background-color: white;*/
+    /*-fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.1), 2, 0, 1, 1);*/
+    -jfx-focus-color: transparent;
+    -jfx-unfocus-color: transparent;
+    -fx-border-width: 0; /* Sin bordes en general */
+    -fx-background-radius: 0; /* Sin bordes redondeados */
+    -fx-background-color: white;
+}
+
+.combo__money .jfx-combo-box-popup .list-view {
+    -fx-padding: 0 0 0 5px; /* Agregar padding solo a la izquierda */
+    -fx-border-width: 1px; /* Grosor del borde izquierdo */
+    -fx-border-color: #888888; /* Color del borde izquierdo */
+}
+
+.textfield__money{
+    -jfx-focus-color: transparent;
+    -jfx-unfocus-color: transparent;
+    -fx-border-width: 0; /* Sin bordes en general */
+    -fx-background-radius: 0; /* Sin bordes redondeados */
+    -fx-background-color: white;
+}
