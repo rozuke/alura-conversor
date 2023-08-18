@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox fx:id="main__panel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="646.0" prefWidth="1086.0" styleClass="main__panel" stylesheets="@style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<HBox fx:id="main__panel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="646.0" prefWidth="1086.0" styleClass="main__panel" stylesheets="@style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alurachallenge2conversor.controller.CurrencyController">
    <children>
       <VBox prefHeight="831.0" prefWidth="295.0">
          <children>
@@ -103,17 +103,17 @@
                   </Label>
                   <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@assets/EU.png" />
+                        <Image url="@assets/countries/EU.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@assets/GB.png" />
+                        <Image url="@assets/countries/GB.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@assets/JP.png" />
+                        <Image url="@assets/countries/JP.png" />
                      </image>
                   </ImageView>
                </children></Pane>
@@ -135,17 +135,17 @@
                   </Label>
                   <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@assets/US.png" />
+                        <Image url="@assets/countries/US.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@assets/GB.png" />
+                        <Image url="@assets/countries/GB.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@assets/JP.png" />
+                        <Image url="@assets/countries/JP.png" />
                      </image>
                   </ImageView>
                </children>
@@ -159,17 +159,17 @@
                   </Label>
                   <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="17.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@assets/US.png" />
+                        <Image url="@assets/countries/US.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="17.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@assets/EU.png" />
+                        <Image url="@assets/countries/EU.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="17.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@assets/JP.png" />
+                        <Image url="@assets/countries/JP.png" />
                      </image>
                   </ImageView>
                </children>
@@ -183,17 +183,17 @@
                   </Label>
                   <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@assets/US.png" />
+                        <Image url="@assets/countries/US.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@assets/EU.png" />
+                        <Image url="@assets/countries/EU.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@assets/GB.png" />
+                        <Image url="@assets/countries/GB.png" />
                      </image>
                   </ImageView>
                </children>
@@ -229,7 +229,7 @@
             </Label>
             <Pane layoutX="40.0" layoutY="475.0" prefHeight="48.0" prefWidth="287.0">
                <children>
-                  <JFXComboBox fx:id="combo__money" layoutX="90.0" prefHeight="48.0" prefWidth="197.0" styleClass="combo__money" stylesheets="@style.css" />
+                  <JFXComboBox fx:id="comboCurrencyInput" layoutX="90.0" prefHeight="48.0" prefWidth="197.0" styleClass="combo__money" stylesheets="@style.css" />
                   <JFXTextArea prefHeight="46.0" prefWidth="88.0" styleClass="textfield__money" stylesheets="@style.css">
                      <font>
                         <Font name="Roboto" size="18.0" />
@@ -239,7 +239,7 @@
             </Pane>
             <Pane layoutX="472.0" layoutY="475.0" prefHeight="48.0" prefWidth="287.0">
                <children>
-                  <JFXComboBox fx:id="combo__money1" layoutX="90.0" prefHeight="48.0" prefWidth="197.0" styleClass="combo__money" stylesheets="@style.css" />
+                  <JFXComboBox fx:id="comboCurrencyOutput" layoutX="90.0" prefHeight="48.0" prefWidth="197.0" styleClass="combo__money" stylesheets="@style.css" />
                   <JFXTextArea layoutY="-1.0" prefHeight="46.0" prefWidth="88.0" styleClass="textfield__money" stylesheets="@style.css">
                      <font>
                         <Font name="Roboto" size="18.0" />
