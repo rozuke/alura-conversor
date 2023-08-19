@@ -37,4 +37,12 @@ public class CountryConstant {
         countries.add( new Country("UYU", "UY", "Peso uruguayo"));
         countries.add( new Country("VEF", "VE", "Bolívar fuerte venezolano"));
     }
+
+    public static String getCodeCurrencies() {
+        StringBuilder countriesCode = new StringBuilder();
+        for (Country code: countries) {
+            countriesCode.append(code.getCodeCurrency() + ",");
+        }
+        return countriesCode.toString();
+    }
 }

@@ -2,6 +2,8 @@ module com.alurachallenge2conversor {
     requires javafx.controls;
     requires javafx.fxml;
     requires com.jfoenix;
+    requires com.google.gson;
+    requires okhttp3;
 
 
     opens com.alurachallenge2conversor to javafx.fxml;
