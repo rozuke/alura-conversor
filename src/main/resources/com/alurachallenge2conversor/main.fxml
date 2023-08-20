@@ -213,7 +213,7 @@
                   <Font name="Roboto Medium" size="18.0" />
                </font>
             </Label>
-            <JFXButton layoutX="352.0" layoutY="463.0" prefHeight="56.0" prefWidth="81.0" text=" ">
+            <JFXButton layoutX="352.0" layoutY="463.0" onAction="#swapComboBoxValue" prefHeight="56.0" prefWidth="81.0" text=" ">
                <graphic>
                   <ImageView fitHeight="66.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -232,7 +232,7 @@
                   <JFXComboBox fx:id="comboCurrencyInput" layoutX="90.0" prefHeight="48.0" prefWidth="197.0" styleClass="combo__money" stylesheets="@style.css" />
                   <JFXTextArea fx:id="textAreaInput" prefHeight="46.0" prefWidth="88.0" styleClass="textfield__money" stylesheets="@style.css">
                      <font>
-                        <Font name="Roboto" size="18.0" />
+                        <Font name="Roboto" size="16.0" />
                      </font>
                   </JFXTextArea>
                </children>
@@ -242,12 +242,11 @@
                   <JFXComboBox fx:id="comboCurrencyOutput" layoutX="90.0" prefHeight="48.0" prefWidth="197.0" styleClass="combo__money" stylesheets="@style.css" />
                   <JFXTextArea fx:id="textAreaOutput" layoutY="-1.0" prefHeight="46.0" prefWidth="88.0" styleClass="textfield__money" stylesheets="@style.css">
                      <font>
-                        <Font name="Roboto" size="18.0" />
+                        <Font name="Roboto" size="16.0" />
                      </font>
                   </JFXTextArea>
                </children>
             </Pane>
-            <Label layoutX="327.0" layoutY="565.0" prefHeight="37.0" prefWidth="129.0" styleClass="textfield__money" stylesheets="@style.css" />
          </children>
       </Pane>
       <Label fx:id="labelResult" text="Label" />

@@ -73,6 +73,16 @@ public class CurrencyController implements Initializable{
 
     }
 
+    public void swapComboBoxValue() {
+        int indexInput = comboCurrencyInput.getSelectionModel().getSelectedIndex();
+        int indexOutput = comboCurrencyOutput.getSelectionModel().getSelectedIndex();
+
+        if (indexOutput >= 0 && indexInput >= 0) {
+            comboCurrencyInput.getSelectionModel().select(indexOutput);
+            comboCurrencyOutput.getSelectionModel().select(indexInput);
+        }
+    }
+
     private void updateConversion(Currency currencyResponse) {
         Country countryInput = comboCurrencyInput.getSelectionModel().getSelectedItem();
         Country countryOutput = comboCurrencyOutput.getSelectionModel().getSelectedItem();
