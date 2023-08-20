@@ -247,7 +247,9 @@
                   </JFXTextArea>
                </children>
             </Pane>
+            <Label layoutX="327.0" layoutY="565.0" prefHeight="37.0" prefWidth="129.0" styleClass="textfield__money" stylesheets="@style.css" />
          </children>
       </Pane>
+      <Label fx:id="labelResult" text="Label" />
    </children>
 </HBox>

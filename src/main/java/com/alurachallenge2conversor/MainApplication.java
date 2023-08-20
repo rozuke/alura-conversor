@@ -20,11 +20,11 @@ public class MainApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("main.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1086, 646);
+        Currency currency = new CallAPI().getResponseCurrencyAPI();
         CurrencyController currencyController = fxmlLoader.getController();
         currencyController.checkTextArea();
         currencyController.uploadDataToComboBox();
-
-//        Currency currency = new CallAPI().getResponseCurrencyAPI();
+        currencyController.addListenerToComponents(currency);
         stage.setTitle("Challenge 2");
         stage.setScene(scene);
         stage.show();
