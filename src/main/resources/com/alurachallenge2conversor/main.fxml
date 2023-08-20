@@ -230,7 +230,7 @@
             <Pane layoutX="40.0" layoutY="475.0" prefHeight="48.0" prefWidth="287.0">
                <children>
                   <JFXComboBox fx:id="comboCurrencyInput" layoutX="90.0" prefHeight="48.0" prefWidth="197.0" styleClass="combo__money" stylesheets="@style.css" />
-                  <JFXTextArea prefHeight="46.0" prefWidth="88.0" styleClass="textfield__money" stylesheets="@style.css">
+                  <JFXTextArea fx:id="textAreaInput" prefHeight="46.0" prefWidth="88.0" styleClass="textfield__money" stylesheets="@style.css">
                      <font>
                         <Font name="Roboto" size="18.0" />
                      </font>
@@ -240,7 +240,7 @@
             <Pane layoutX="472.0" layoutY="475.0" prefHeight="48.0" prefWidth="287.0">
                <children>
                   <JFXComboBox fx:id="comboCurrencyOutput" layoutX="90.0" prefHeight="48.0" prefWidth="197.0" styleClass="combo__money" stylesheets="@style.css" />
-                  <JFXTextArea layoutY="-1.0" prefHeight="46.0" prefWidth="88.0" styleClass="textfield__money" stylesheets="@style.css">
+                  <JFXTextArea fx:id="textAreaOutput" layoutY="-1.0" prefHeight="46.0" prefWidth="88.0" styleClass="textfield__money" stylesheets="@style.css">
                      <font>
                         <Font name="Roboto" size="18.0" />
                      </font>
