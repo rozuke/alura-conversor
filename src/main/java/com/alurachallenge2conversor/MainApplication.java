@@ -22,6 +22,7 @@ public class MainApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 1086, 646);
         Currency currency = new CallAPI().getResponseCurrencyAPI();
         CurrencyController currencyController = fxmlLoader.getController();
+        currencyController.loadMatters(currency);
         currencyController.checkTextArea();
         currencyController.uploadDataToComboBox();
         currencyController.addListenerToComponents(currency);

@@ -116,6 +116,21 @@
                         <Image url="@assets/countries/JP.png" />
                      </image>
                   </ImageView>
+                  <Label fx:id="labelUSDToEUR" layoutX="69.0" layoutY="71.0" prefHeight="18.0" prefWidth="68.0" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelUSDToGBP" layoutX="69.0" layoutY="113.0" prefHeight="18.0" prefWidth="68.0" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelUSDToJPY" layoutX="69.0" layoutY="158.0" prefHeight="18.0" prefWidth="68.0" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Bold" size="14.0" />
+                     </font>
+                  </Label>
                </children></Pane>
             <Label layoutX="40.0" layoutY="129.0" text="Dolar USD">
                <font>
@@ -148,6 +163,21 @@
                         <Image url="@assets/countries/JP.png" />
                      </image>
                   </ImageView>
+                  <Label fx:id="labelEURToUSD" layoutX="61.0" layoutY="68.0" prefHeight="18.0" prefWidth="82.0">
+                     <font>
+                        <Font name="Roboto Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelEURToGBP" layoutX="61.0" layoutY="111.0" prefHeight="18.0" prefWidth="82.0">
+                     <font>
+                        <Font name="Roboto Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelEURToJPY" layoutX="61.0" layoutY="156.0" prefHeight="18.0" prefWidth="82.0">
+                     <font>
+                        <Font name="Roboto Bold" size="14.0" />
+                     </font>
+                  </Label>
                </children>
             </Pane>
             <Pane fx:id="panel__info_lib" layoutX="415.0" layoutY="163.0" prefHeight="218.0" prefWidth="155.0" styleClass="panel__info_lib" stylesheets="@style.css">
@@ -172,6 +202,21 @@
                         <Image url="@assets/countries/JP.png" />
                      </image>
                   </ImageView>
+                  <Label fx:id="labelGBPToUSD" layoutX="70.0" layoutY="65.0" prefHeight="18.0" prefWidth="74.0" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelGBPToEUR" layoutX="68.0" layoutY="108.0" prefHeight="18.0" prefWidth="74.0" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelGBPToJPY" layoutX="69.0" layoutY="153.0" prefHeight="18.0" prefWidth="74.0" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Bold" size="14.0" />
+                     </font>
+                  </Label>
                </children>
             </Pane>
             <Pane fx:id="panel__info_yen" layoutX="604.0" layoutY="163.0" prefHeight="218.0" prefWidth="155.0" styleClass="panel__info_yen" stylesheets="@style.css">
@@ -196,6 +241,21 @@
                         <Image url="@assets/countries/GB.png" />
                      </image>
                   </ImageView>
+                  <Label fx:id="labelJPYToUSD" layoutX="67.0" layoutY="64.0" prefHeight="18.0" prefWidth="74.0" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelJPYToEUR" layoutX="67.0" layoutY="105.0" prefHeight="18.0" prefWidth="74.0" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelJPYToGBP" layoutX="64.0" layoutY="150.0" prefHeight="18.0" prefWidth="82.0" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Bold" size="14.0" />
+                     </font>
+                  </Label>
                </children>
             </Pane>
             <Label layoutX="217.0" layoutY="129.0" text="Euro">
@@ -249,6 +309,5 @@
             </Pane>
          </children>
       </Pane>
-      <Label fx:id="labelResult" text="Label" />
    </children>
 </HBox>

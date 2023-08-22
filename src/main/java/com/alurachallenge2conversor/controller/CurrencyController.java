@@ -31,7 +31,29 @@ public class CurrencyController implements Initializable{
     @FXML
     public JFXTextArea textAreaOutput;
     @FXML
-    public Label labelResult;
+    public Label labelUSDToEUR;
+    @FXML
+    public Label labelUSDToGBP;
+    @FXML
+    public Label labelUSDToJPY;
+    @FXML
+    public Label labelEURToUSD;
+    @FXML
+    public Label labelEURToGBP;
+    @FXML
+    public Label labelEURToJPY;
+    @FXML
+    public Label labelGBPToUSD;
+    @FXML
+    public Label labelGBPToEUR;
+    @FXML
+    public Label labelGBPToJPY;
+    @FXML
+    public Label labelJPYToUSD;
+    @FXML
+    public Label labelJPYToEUR;
+    @FXML
+    public Label labelJPYToGBP;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -99,13 +121,38 @@ public class CurrencyController implements Initializable{
                 alert.setContentText("Corrije los valores ingresados");
                 alert.showAndWait();
             }
-            String outputValue = Util.convertCurrency(inputValue, Util.getRatesFromAPI(currencyResponse, countryInput.getCodeCurrency()), Util.getRatesFromAPI(currencyResponse, countryOutput.getCodeCurrency()));
-            System.out.println(outputValue);
+            double outputValue = Util.convertCurrency(inputValue, Util.getRatesFromAPI(currencyResponse, countryInput.getCodeCurrency()), Util.getRatesFromAPI(currencyResponse, countryOutput.getCodeCurrency()));
             Platform.runLater(() -> {
                 textAreaOutput.clear();
-                textAreaOutput.appendText(outputValue);
+                textAreaOutput.appendText(Util.formatDouble(outputValue));
             });
         }
+    }
+    public void loadMatters(Currency currency) {
+            setMattersForEUR(currency);
+            setMattersForUSD(currency);
+            setMatterForGBP(currency);
+            setMattersForJPY(currency);
+    }
+    private void setMatterForGBP(Currency currency) {
+        labelGBPToUSD.setText(Util.formatDouble(Util.getMatter(Util.getRatesFromAPI(currency, "GBP"), Util.getRatesFromAPI(currency, "USD"))));
+        labelGBPToEUR.setText(Util.formatDouble(Util.getMatter(Util.getRatesFromAPI(currency, "GBP"), Util.getRatesFromAPI(currency, "EUR"))));
+        labelGBPToJPY.setText(Util.formatDouble(Util.getMatter(Util.getRatesFromAPI(currency, "GBP"), Util.getRatesFromAPI(currency, "JPY"))));
+    }
+    private void setMattersForJPY(Currency currency) {
+        labelJPYToUSD.setText(Util.formatDouble(Util.getMatter(Util.getRatesFromAPI(currency, "JPY"), Util.getRatesFromAPI(currency, "USD"))));
+        labelJPYToEUR.setText(Util.formatDouble(Util.getMatter(Util.getRatesFromAPI(currency, "JPY"), Util.getRatesFromAPI(currency, "EUR"))));
+        labelJPYToGBP.setText(Util.formatDouble(Util.getMatter(Util.getRatesFromAPI(currency, "JPY"), Util.getRatesFromAPI(currency, "GBP"))));
+    }
+    private void setMattersForEUR(Currency currency) {
+        labelEURToUSD.setText(Util.formatDouble(Util.getMatter(Util.getRatesFromAPI(currency, "EUR"), Util.getRatesFromAPI(currency, "USD"))));
+        labelEURToGBP.setText(Util.formatDouble(Util.getMatter(Util.getRatesFromAPI(currency, "EUR"), Util.getRatesFromAPI(currency, "GBP"))));
+        labelEURToJPY.setText(Util.formatDouble(Util.getMatter(Util.getRatesFromAPI(currency, "EUR"), Util.getRatesFromAPI(currency, "JPY"))));
+    }
+    private void setMattersForUSD(Currency currency) {
+        labelUSDToEUR.setText(Util.formatDouble(Util.getMatter(Util.getRatesFromAPI(currency, "USD"), Util.getRatesFromAPI(currency, "EUR"))));
+        labelUSDToGBP.setText(Util.formatDouble(Util.getMatter(Util.getRatesFromAPI(currency, "USD"), Util.getRatesFromAPI(currency, "GBP"))));
+        labelUSDToJPY.setText(Util.formatDouble(Util.getMatter(Util.getRatesFromAPI(currency, "USD"), Util.getRatesFromAPI(currency, "JPY"))));
     }
     private void updateTextOutput(double value) {
         textAreaOutput.setText(String.valueOf(value));

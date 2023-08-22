@@ -7,9 +7,12 @@ import java.text.DecimalFormat;
 
 public class Util {
 
-    public static String convertCurrency(double value, float baseInput, float baseOutput) {
-        double result = (value * (1 / baseInput) * baseOutput);
-        return String.format("%.4f", result).replace(",", ".");
+    public static double convertCurrency(double value, float baseInput, float baseOutput) {
+        return (value * (1 / baseInput) * baseOutput);
+    }
+
+    public static double getMatter(float inputCurrency, float outputCurrency) {
+        return  1 / convertCurrency(1.0, outputCurrency, inputCurrency);
     }
     public static float getRatesFromAPI(Currency currency, String code) {
         return switch (code) {
@@ -40,5 +43,9 @@ public class Util {
             case "VEF" -> currency.rates.VEF;
             default -> -1;
         };
+    }
+
+    public static String formatDouble(double value) {
+        return String.format("%.4f", value).replace(",", ".");
     }
 }
